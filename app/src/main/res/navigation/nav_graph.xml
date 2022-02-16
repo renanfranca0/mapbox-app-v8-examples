@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.mapboxappv8examples.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_currentLocationFragment2"
+            app:destination="@id/currentLocationFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_markerLocationFragment"
+            app:destination="@id/markerLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/currentLocationFragment2"
+        android:name="com.example.mapboxappv8examples.CurrentLocationFragment"
+        android:label="fragment_current_location"
+        tools:layout="@layout/fragment_current_location" />
+    <fragment
+        android:id="@+id/markerLocationFragment"
+        android:name="com.example.mapboxappv8examples.MarkerLocationFragment"
+        android:label="fragment_marker_location"
+        tools:layout="@layout/fragment_marker_location" />
+</navigation>
